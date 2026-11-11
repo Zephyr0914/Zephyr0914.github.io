@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujal Aggarwal | Quantitative Finance & Machine Learning</title>
+  
+  <meta name="description" content="Portfolio of Sujal Aggarwal - Final Year Undergraduate at IIT Kanpur in Economic Sciences, specializing in Quantitative Trading, Machine Learning, Deep Reinforcement Learning, and Full-Stack Engineering.">
+  <meta name="author" content="Sujal Aggarwal">
+  
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    :root {
+      --bg: #090a0f;
+      --bg-surface: #10121a;
+      --bg-surface-elevated: #151824;
+      --border: #1e2230;
+      --border-hover: #2e344a;
+      
+      --text: #ededed;
+      --text-muted: #8a8f9d;
+      --text-dim: #555b6e;
+      
+      --accent: #60a5fa;
+      --accent-dim: rgba(96, 165, 250, 0.12);
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    /* Navbar */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9, 10, 15, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-socials a {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-socials a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5rem 0 3.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-meta-item i {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .hero-meta-item a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--text-dim);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .hero-meta-item a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Section structure */
+    section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title i {
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    /* Minimalist Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    .filter-btn.active {
+      background: var(--bg-surface-elevated);
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Category divider when in All mode */
+    .category-divider {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 2rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .category-divider:first-of-type {
+      margin-top: 0;
+    }
+
+    .category-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .category-divider i {
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* Entry card (Used for Experience, Research, Projects, Education) */
+    .entry-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.15s ease;
+    }
+
+    .entry-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-card:hover {
+      border-color: var(--border-hover);
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .entry-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .entry-title a {
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: color 0.15s ease;
+    }
+
+    .entry-title a:hover {
+      color: var(--accent);
+    }
+
+    .entry-title a i.link-icon {
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    .entry-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .entry-subtitle {
+      font-size: 0.88rem;
+      color: var(--accent);
+      margin-bottom: 0.85rem;
+      font-weight: 400;
+    }
+
+    .entry-bullets {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .entry-bullets li {
+      position: relative;
+      padding-left: 1.15rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+      line-height: 1.55;
+    }
+
+    .entry-bullets li:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--text-dim);
+    }
+
+    .entry-bullets strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* Skills layout */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-block {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .skill-block-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-block-title i {
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .skill-list {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Coursework Grid */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .course-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Extra-Curriculars list */
+    .achievements-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .achievement-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1.15rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .achievement-item i {
+      color: var(--accent);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .achievement-item strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero-name {
+        font-size: 2rem;
+      }
+      .entry-header {
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header / Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#about" class="nav-brand">Sujal Aggarwal</a>
+      
+      <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+      </ul>
+
+      <div class="nav-socials">
+        <a href="https://github.com/Zephyr0914" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sujal-aggarwal-a541bb280/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:asujal23@iitk.ac.in" title="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Introduction -->
+  <header id="about" class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Department of Economic Sciences • IIT Kanpur</div>
+      <h1 class="hero-name">Sujal Aggarwal</h1>
+      <p class="hero-desc">
+        Final year undergraduate student at Indian Institute of Technology Kanpur with expertise in Quantitative Trading, Machine Learning, Deep Reinforcement Learning for financial derivatives, and Full-Stack Engineering.
+      </p>
+
+      <div class="hero-meta-row">
+        <span class="hero-meta-item">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:asujal23@iitk.ac.in">asujal23@iitk.ac.in</a>
+        </span>
+        <span class="hero-meta-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/Zephyr0914" target="_blank" rel="noopener noreferrer">github.com/Zephyr0914</a>
+        </span>
+        <span class="hero-meta-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/sujal-aggarwal-a541bb280/" target="_blank" rel="noopener noreferrer">Sujal Aggarwal</a>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Work Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+      </div>
+
+      <div class="entry-card">
+        <div class="entry-header">
+          <h3 class="entry-title">Trading Analyst Intern</h3>
+          <span class="entry-date">May’26 – Jul’26</span>
+        </div>
+        <div class="entry-subtitle">Axxela Research & Analytics Ltd.</div>
+
+        <ul class="entry-bullets">
+          <li>Identified and traded relative-value opportunities across the Brent futures curve by analyzing mean-reverting behavior in calendar-spread structures across multiple contract maturities.</li>
+          <li>Analyzed multi-leg Brent structures, including butterflies and double butterflies, using EMA, Bollinger Bands and RSI to generate trade signals across different market conditions.</li>
+          <li>Constructed hedged positions across correlated structures with multiple outright futures, using ATR-based position sizing to manage directional exposure and optimize risk allocation.</li>
+          <li>Incorporated EIA releases, OPEC decisions, seasonality and geopolitical developments into trade selection and position sizing to account for evolving market conditions.</li>
+          <li>Executed 73 lots across combinations of 7 Brent futures structures, realizing $1,240 in net P&L over a one-month period.</li>
+        </ul>
+
+        <div class="tech-tags">
+          <span class="tech-tag">Brent Futures</span>
+          <span class="tech-tag">Calendar Spreads</span>
+          <span class="tech-tag">Butterflies</span>
+          <span class="tech-tag">ATR Sizing</span>
+          <span class="tech-tag">Bollinger Bands & RSI</span>
+          <span class="tech-tag">Relative-Value Arbitrage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Experience -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-flask"></i> Research Experience</h2>
+      </div>
+
+      <div class="entry-card">
+        <div class="entry-header">
+          <h3 class="entry-title">Deep RL for American Options Pricing</h3>
+          <span class="entry-date">Jan’26 – Present</span>
+        </div>
+        <div class="entry-subtitle">Prof. Sourav Majumdar, Department of Management Sciences, IIT Kanpur</div>
+
+        <ul class="entry-bullets">
+          <li>Developed a Deep Reinforcement Learning architecture for American multi-asset option pricing, addressing key limitations of the Longstaff-Schwartz Monte Carlo method.</li>
+          <li>Designed an Actor-Critic model to learn optimal exercise policies, systematically evaluating pricing performance across GBM, Merton Jump-Diffusion, and CIR stochastic processes.</li>
+          <li>Enhanced the system for correlated multi-asset basket options, integrating asset correlations and basket-level state information.</li>
+          <li>Built a Time-Causal Variational Autoencoder (TC-VAE) for market-path generation under low-sample regimes, preserving temporal causality while capturing realistic market dynamics.</li>
+          <li>Achieved sub-0.5% pricing deviation from LSM across Merton Jump-Diffusion configurations and outperformed Neural-LSM in 22 of 27 CIR configurations, with errors near or below 1%.</li>
+        </ul>
+
+        <div class="tech-tags">
+          <span class="tech-tag">Deep Reinforcement Learning</span>
+          <span class="tech-tag">Actor-Critic</span>
+          <span class="tech-tag">Option Pricing</span>
+          <span class="tech-tag">TC-VAE</span>
+          <span class="tech-tag">Merton Jump-Diffusion</span>
+          <span class="tech-tag">CIR Processes</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Categorized by Technology Area -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-code"></i> Key Projects</h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">All Areas</button>
+        <button class="filter-btn" onclick="filterCategory('web', this)">Full-Stack & Web Systems</button>
+        <button class="filter-btn" onclick="filterCategory('ai', this)">AI & Machine Learning</button>
+        <button class="filter-btn" onclick="filterCategory('quant', this)">Quantitative & Time Series</button>
+      </div>
+
+      <div id="projectsContainer">
+
+        <!-- ==================== 1. FULL-STACK & WEB SYSTEMS ==================== -->
+        <div class="category-divider" data-group="web">
+          <i class="fa-solid fa-globe"></i> Full-Stack & Web Systems
+        </div>
+
+        <!-- Mind_Care (Equal style with other projects) -->
+        <div class="entry-card project-card" data-category="web">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Mind_Care" target="_blank" rel="noopener noreferrer">
+                Mind_Care
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Collaborative Project</span>
+          </div>
+          <div class="entry-subtitle">Mental Health Analytics Dashboard (Jayant Mitawa, Kushagra Singh, Ashish Rawal, Sujal Aggarwal)</div>
+
+          <ul class="entry-bullets">
+            <li>Engineered a mental health analytics dashboard that fetches anonymized rating data from a backend API and visualizes it in a clean React interface.</li>
+            <li>Decoupled data flow by serving CSV dataset content as JSON via a Node.js and Express backend instead of bundling heavy CSV files in the frontend.</li>
+            <li>Implemented interactive data exploration tables and charts using PapaParse for client-side metric filtering and quick exploration.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">PapaParse</span>
+            <span class="tech-tag">Data Analytics</span>
+          </div>
+        </div>
+
+        <!-- Eventrix -->
+        <div class="entry-card project-card" data-category="web">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Eventrix" target="_blank" rel="noopener noreferrer">
+                Eventrix
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Aug’25 – Nov’25</span>
+          </div>
+          <div class="entry-subtitle">Self Project</div>
+
+          <ul class="entry-bullets">
+            <li>Engineered a comprehensive full-stack event management platform using the MERN stack, enabling students to discover and register for university events through a centralized portal.</li>
+            <li>Developed secure RESTful APIs with JWT-based authentication and Role-Based Access Control, supporting distinct workflows and personalized dashboards for students and administrators.</li>
+            <li>Integrated payment processing and real-time notifications with a responsive & user friendly interface for seamless registrations.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- ==================== 2. AI & MACHINE LEARNING ==================== -->
+        <div class="category-divider" data-group="ai">
+          <i class="fa-solid fa-brain"></i> AI, Computer Vision & Machine Learning
+        </div>
+
+        <!-- Mouse Control using OpenCV -->
+        <div class="entry-card project-card" data-category="ai">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Mouse-Control-Using-EyeGaze-and-EyeBlink" target="_blank" rel="noopener noreferrer">
+                Mouse Control using OpenCV
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Mar’25 – May’25</span>
+          </div>
+          <div class="entry-subtitle">EE655 Course Project, Prof. Koteswar Rao Jerripothula</div>
+
+          <ul class="entry-bullets">
+            <li>Developed a webcam-based system enabling real-time mouse control through eye movements, blinks and hand gestures.</li>
+            <li>Leveraged OpenCV Haar Cascades to track eye positions for precise cursor control and detect blinks to trigger mouse click.</li>
+            <li>Implemented MediaPipe Face Mesh to enhance accuracy and stability by detecting 468 facial landmarks for high precision.</li>
+            <li>Integrated MediaPipe Hands to detect hand gestures for system commands like copy and paste automated via pyautogui.</li>
+            <li>Attained 90% click and 92% gesture accuracy, minimizing jitter via exponential smoothing and multi-frame checks.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">MediaPipe</span>
+            <span class="tech-tag">PyAutoGUI</span>
+            <span class="tech-tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <!-- Kernel Methods & PUFs Inversion -->
+        <div class="entry-card project-card" data-category="ai">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/PUFs_Inversion" target="_blank" rel="noopener noreferrer">
+                Kernel Methods & PUFs Inversion
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Aug’25 – Nov’25</span>
+          </div>
+          <div class="entry-subtitle">CS771 Course Project, Prof. Purushottam Kar</div>
+
+          <ul class="entry-bullets">
+            <li>Designed kernel and numerical algorithms for nonlinear regression and XOR-Arbiter PUF model inversion, achieving R² = 0.97 on the regression test set.</li>
+            <li>Derived a composite Mercer kernel for semi-parametric regression along with implementing vectorized Gram-matrix computations for efficient model training and evaluation.</li>
+            <li>Developed an SVD-based PUF decoding algorithm with non-negative least squares to recover 256 circuit delay parameters from 1089-dimensional models.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Mercer Kernels</span>
+            <span class="tech-tag">SVD</span>
+            <span class="tech-tag">Gram-Matrix</span>
+            <span class="tech-tag">Machine Learning</span>
+          </div>
+        </div>
+
+        <!-- Fact Filter -->
+        <div class="entry-card project-card" data-category="ai">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Fact-Filter-Using-NLP" target="_blank" rel="noopener noreferrer">
+                Fact Filter
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">May’24 – Jul’24</span>
+          </div>
+          <div class="entry-subtitle">Public Policy and Opinion Cell</div>
+
+          <ul class="entry-bullets">
+            <li>Developed a Fake News Detection Model using Natural Language Processing along with machine learning, achieving 99.4% accuracy on the classification task.</li>
+            <li>Built a text preprocessing and feature-extraction pipeline using NLTK and 5,000-dimensional TF-IDF representations, with tokenization, stopword removal, stemming and lemmatization.</li>
+            <li>Implemented and compared Logistic Regression, Random Forest, Decision Tree & Gradient Boosting using GridSearchCV, evaluating accuracy, and F1-score.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLTK</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">TF-IDF</span>
+            <span class="tech-tag">Scikit-Learn</span>
+          </div>
+        </div>
+
+        <!-- ==================== 3. QUANTITATIVE & TIME SERIES ==================== -->
+        <div class="category-divider" data-group="quant">
+          <i class="fa-solid fa-chart-line"></i> Quantitative Finance & Time Series Forecasting
+        </div>
+
+        <!-- Hybrid Time Series Forecasting -->
+        <div class="entry-card project-card" data-category="quant">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Hybrid-Time-Series-Forecasting" target="_blank" rel="noopener noreferrer">
+                Hybrid Time Series Forecasting
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Mar’26 – May’26</span>
+          </div>
+          <div class="entry-subtitle">ECO723 Course Project, Prof. Sanjiv Kumar</div>
+
+          <ul class="entry-bullets">
+            <li>Developed a hybrid ARIMA-LSTM forecasting framework integrating statistical and deep-learning models to capture temporal patterns in volatile agricultural price series.</li>
+            <li>Built and tuned ARIMA, GARCH and LSTM models, automating input-lag selection using ACF and Random Forest to reduce model dimensionality and computational requirements.</li>
+            <li>Built an end-to-end Python modeling pipeline using pmdarima, arch and TensorFlow, achieving up to 25% RMSE, 28% MAPE and 29% MASE improvement over standalone models.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">ARIMA</span>
+            <span class="tech-tag">GARCH</span>
+            <span class="tech-tag">LSTM</span>
+            <span class="tech-tag">pmdarima</span>
+            <span class="tech-tag">Time Series</span>
+          </div>
+        </div>
+
+        <!-- Mathematical Trading Strategies -->
+        <div class="entry-card project-card" data-category="quant">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/Mathematical-Trading-Strategies" target="_blank" rel="noopener noreferrer">
+                Mathematical Trading Strategies
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Algorithmic Backtesting</span>
+          </div>
+          <div class="entry-subtitle">Quantitative Strategy Implementation</div>
+
+          <ul class="entry-bullets">
+            <li>Engineered backtesting pipelines for quantitative and mathematical trading strategies across equity and derivatives historical data.</li>
+            <li>Analyzed Sharpe ratios, maximum drawdowns, and momentum signals utilizing yfinance, NumPy, and Pandas.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">yfinance</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Backtesting</span>
+          </div>
+        </div>
+
+        <!-- Macroeconomic Forecasting (US Inflation & GDP) -->
+        <div class="entry-card project-card" data-category="quant">
+          <div class="entry-header">
+            <h3 class="entry-title">
+              <a href="https://github.com/Zephyr0914/US_Inflation_Forecasting" target="_blank" rel="noopener noreferrer">
+                Macroeconomic Forecasting (US Inflation & GDP)
+                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+              </a>
+            </h3>
+            <span class="entry-date">Econometric Modeling</span>
+          </div>
+          <div class="entry-subtitle">
+            <a href="https://github.com/Zephyr0914/US_Inflation_Forecasting" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">US Inflation Repo</a> • 
+            <a href="https://github.com/Zephyr0914/Nowcasting-GDP" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Nowcasting GDP Repo</a>
+          </div>
+
+          <ul class="entry-bullets">
+            <li>Constructed econometric models for CPI inflation forecasting using macroeconomic indicators and time-series formulations.</li>
+            <li>Built high-frequency nowcasting models to track real-time GDP growth trajectories.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Econometrics</span>
+            <span class="tech-tag">Time Series</span>
+            <span class="tech-tag">Macro Modeling</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h3 class="skill-block-title"><i class="fa-solid fa-terminal"></i> Languages & Tools</h3>
+          <p class="skill-list">C, C++, Python, Git, SQL, LaTeX, MATLAB, JavaScript</p>
+        </div>
+
+        <div class="skill-block">
+          <h3 class="skill-block-title"><i class="fa-solid fa-chart-line"></i> Libraries & Frameworks</h3>
+          <p class="skill-list">NumPy, Pandas, OpenCV, PyTorch, yfinance, TensorFlow, Matplotlib, Scikit-Learn, pmdarima, arch, NLTK</p>
+        </div>
+
+        <div class="skill-block">
+          <h3 class="skill-block-title"><i class="fa-solid fa-server"></i> Web & Full-Stack</h3>
+          <p class="skill-list">React, Node.js, Express, MongoDB, RESTful APIs, JWT Auth, PapaParse, MediaPipe, PyAutoGUI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Coursework -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      </div>
+
+      <div class="entry-card">
+        <div class="entry-header">
+          <h3 class="entry-title">Indian Institute of Technology Kanpur</h3>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <div class="entry-subtitle">B.S. in Economic Sciences • CPI: 8.2 / 10</div>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          Rigorous coursework spanning quantitative economics, machine learning, optimization, statistics, and computing.
+        </p>
+      </div>
+
+      <div class="entry-card">
+        <div class="entry-header">
+          <h3 class="entry-title">DAV Public School, Delhi</h3>
+          <span class="entry-date">2023</span>
+        </div>
+        <div class="entry-subtitle">CBSE (Class XII) • 95.6%</div>
+      </div>
+
+      <div class="entry-card">
+        <div class="entry-header">
+          <h3 class="entry-title">DAV Public School, Delhi</h3>
+          <span class="entry-date">2021</span>
+        </div>
+        <div class="entry-subtitle">CBSE (Class X) • 94.6%</div>
+      </div>
+
+      <!-- Relevant Coursework (Clean, no 'outstanding' tag, intact info) -->
+      <div style="margin-top: 1.5rem;">
+        <h3 style="font-size: 0.95rem; font-weight: 600; color: #ffffff; margin-bottom: 0.75rem;">Relevant Courses</h3>
+        <div class="courses-grid">
+          <div class="course-item">Applied Probability & Statistics</div>
+          <div class="course-item">Fundamentals of Computing</div>
+          <div class="course-item">Computer Vision & Deep Learning</div>
+          <div class="course-item">Data Structures & Algorithms</div>
+          <div class="course-item">Introduction to Machine Learning</div>
+          <div class="course-item">Optimization</div>
+          <div class="course-item">Game Theory</div>
+          <div class="course-item">Single Variable Calculus</div>
+          <div class="course-item">Ordinary Differential Equations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra-Curricular Achievements -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Extra-Curricular Achievements</h2>
+      </div>
+
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>1st Position:</strong> Inter-Hall Tech event Takneek’24 and SnT-Code’24 in Astronomy events for the pool Nawabs.</div>
+        </div>
+
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>Runner-up:</strong> IITK Consulting Group’s Case Competition; designed BYJU’s revival strategy using McKinsey 7S framework.</div>
+        </div>
+
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>Accounts Secretary, Hall 5:</strong> Managed and drafted a budget of INR 5 lakhs+ for catering needs of 590+ hall residents.</div>
+        </div>
+
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>Student Guide:</strong> Facilitated the smooth transition of 6 freshmen into college life and assisted in UG Orientation.</div>
+        </div>
+
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>Academic Mentor:</strong> Designated as Academic Mentor for mentoring and guiding 100+ first year students in Waves and Oscillations.</div>
+        </div>
+
+        <div class="achievement-item">
+          <i class="fa-solid fa-award"></i>
+          <div><strong>Social Responsibility:</strong> Contributed in CanSupport Walk for Life initiative, contributing to cancer awareness.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer>
+    <div class="container">
+      <p>Sujal Aggarwal • Department of Economic Sciences, IIT Kanpur</p>
+      <p style="margin-top: 0.35rem;">
+        <a href="mailto:asujal23@iitk.ac.in">asujal23@iitk.ac.in</a> • 
+        <a href="https://github.com/Zephyr0914" target="_blank" rel="noopener noreferrer">GitHub</a> • 
+        <a href="https://www.linkedin.com/in/sujal-aggarwal-a541bb280/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Minimal Filtering Script -->
+  <script>
+    function filterCategory(category, btn) {
+      // Toggle button states
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      const dividers = document.querySelectorAll('.category-divider');
+
+      if (category === 'all') {
+        cards.forEach(card => card.style.display = 'block');
+        dividers.forEach(d => d.style.display = 'flex');
+      } else {
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          card.style.display = (cardCat === category) ? 'block' : 'none';
+        });
+        dividers.forEach(d => {
+          const group = d.getAttribute('data-group');
+          d.style.display = (group === category) ? 'flex' : 'none';
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
